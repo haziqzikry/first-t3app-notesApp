@@ -62,10 +62,10 @@ export const authOptions: NextAuthOptions = {
      * @see https://next-auth.js.org/providers/github
      */
 
-    SpotifyProvider({
-      clientId: env.SPOTIFY_CLIENT_ID,
-      clientSecret: env.SPOTIFY_CLIENT_SECRET,
-    }),
+    // SpotifyProvider({
+    //   clientId: env.SPOTIFY_CLIENT_ID,
+    //   clientSecret: env.SPOTIFY_CLIENT_SECRET,
+    // }),
   ],
 };
 

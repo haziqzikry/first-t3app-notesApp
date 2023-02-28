@@ -7,14 +7,14 @@ import {
 } from "~/server/api/trpc";
 
 export const exampleRouter = createTRPCRouter({
-  hello: publicProcedure
+  hello: publicProcedure //call without authorized
     .input(z.object({ text: z.string() }))
     .query(({ input }) => {
       return {
         greeting: `Hello ${input.text}`,
       };
     }),
-
+    //procedure connects to prisma
   getAll: publicProcedure.query(({ ctx }) => {
     return ctx.prisma.example.findMany();
   }),
